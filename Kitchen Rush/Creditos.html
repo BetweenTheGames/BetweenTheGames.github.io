@@ -21,131 +21,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     </head>
 
-    <body>
+    <body background="assets/images/Backgrounds/Fonfo_liso.png" style="background-attachment: fixed; background-repeat: no-repeat">
 
-        <div id="botones" class="containerCred ir">
-			<a href="Menu.html">
+        <div id="botones" lang='es' class="containerCred ir">
+		
+			<a href="Menu.html" lang='es'>
 				<button class="btn btnVolver" ></button>
 			</a>
-			<div class="row">
-                <div class="col-xs-2 text-center">
-                    <div class="thumbnail">
-                        <img class="img-responsive" src="assets/images/Backgrounds/Teteconfondo.png" alt="">
-                        <<div class="caption">
-                            <h4>
-                                Álvaro Sal<br>
-                                <small>Artista & Compositor</small>
-                            </h4>
-
-                            <ul class="list-inline">
-                                <!-- <li><a href="#"><i class="fa fa-2x fa-facebook-square" onclick="window.open('https://www.facebook.com/profile.php?id=100029865364259')"></i></a>
-                                 </li> Esto es el boton de facebook-->
-                                <!--<li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                </li>-->
-                                <li>
-                                    <a href="creditos.html"><i class="fa fa-2x fa-twitter-square" onclick="window.open('https://twitter.com/DibuTete')"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2 text-center">
-                    <div class="thumbnail">
-                        <img class="img-responsive" src="assets/images/Backgrounds/Pabloconfondo.png" alt="">
-                        <div class="caption">
-                            <h3>
-                                Pablo Sánchez<br>
-                                <small>Programador</small>
-                            </h3>
-
-                            <ul class="list-inline">
-                                <!--<li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                </li> aquí iria el boton -->
-                                <!--<li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                </li>-->
-                                <li>
-                                    <a href="creditos.html"><i class="fa fa-2x fa-twitter-square" onclick="window.open('https://twitter.com/TeTrix101')"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2 text-center">
-                    <div class="thumbnail">
-                        <!--<img class="img-responsive" src="data:image/png;base64,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" alt="">-->
-                        <img class="img-responsive" src="assets/images/Backgrounds/Luisconfondo.png" alt="">
-                        <div class="caption">
-                            <h3>
-                                Luis Barreto<br>
-                                <small>Artista & Game Designer</small>
-                            </h3>
-
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="creditos.html"><i class="fa fa-2x fab fa-instagram" onclick="window.open('https://www.instagram.com/lu_lu_luis/')"></i></a>
-                                </li>
-                                <!--<li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-2x fa-twitter-square"></i></a>
-                                </li>-->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2 text-center">
-                    <div class="thumbnail">
-                        <img class="img-responsive" src="assets/images/Backgrounds/Ivanconfondo.png" alt="">
-                        <div class="caption">
-                            <h3>
-                                Ivan Martín<br>
-                                <small>Guionista & WebDesigner</small>
-                            </h3>
-
-                            <ul class="list-inline">
-                                <li>
-                                    <a href="creditos.html"><i class="fa fa-2x fa-instagram" onclick="window.open('https://www.instagram.com/ivanmartin20/')"></i></a>
-                                </li>
-                                <!-- <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>-->
-                                <li>
-                                    <a href="creditos.html"><i class="fa fa-2x fa-twitter-square" onclick="window.open('https://twitter.com/ivanmartin20')"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-2 text-center">
-                    <div class="thumbnail">
-                        <img class="img-responsive" src="assets/images/Backgrounds/Joseconfondo.png" alt="">
-                        <div class="caption">
-							<h3>
-                                Jose Antonio<br>
-                                <small>Programador</small>
-                            </h3>
-
-                            <ul class="list-inline">
-                                <!--<li><a href="#somosnosotros"><i class="fa fa-2x fa-facebook-square"></i></a>
-                                </li>-->
-                                <!-- <li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
-                                 </li>-->
-                                <li>
-                                    <a href="creditos.html"><i class="fa fa-2x fa-twitter-square" onclick="window.open('https://twitter.com/DarkrimX')"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-
-        <!--<a href="Menu.html">
-            <button class="btn">Volver</button>
-        </a>
-
-        <a href="Menu.html" lang="es">Volver</a>
-        <a href="Menu.html" lang="en">Back</a>
-        -->
-        </div>
+		<div id="botones" lang='en' class="containerCred containerCredIng ir">
+		
+			<!--<a href="Menu.html" lang='es'>
+				<button class="btn btnVolver" ></button>
+			</a>-->
+			<a href="Menu.html" lang='en'>
+				<button class="btn btnVolver btnVolverIng" ></button>
+			</a>
+		</div>
 
         <script language="JavaScript">
             document.body.className = sessionStorage.Idioma;

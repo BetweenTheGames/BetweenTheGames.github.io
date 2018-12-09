@@ -12,13 +12,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     </head>
 
-    <body>
+    <body background="assets/images/Backgrounds/Fonfo_liso.png" style="background-attachment: fixed; background-repeat: no-repeat">
         <div id="botones" class="containerMenu ir">
 
-            <a href="creditos.html" lang='es'>
+            <a href="Creditos.html" lang='es'>
                 <button class="btn btnCreditos"></button>
             </a>
-			<a href="creditos.html" lang='en'>
+			<a href="Creditos.html" lang='en'>
                 <button class="btn btnCreditos btnCreditosIng"></button>
             </a>
 
@@ -29,10 +29,10 @@
                 <button class="btn btnJugar btnJugarIng"></button>
             </a>
 
-            <a href="puntuacion.html" lang='es'>
+            <a href="Puntuacion.html" lang='es'>
                 <button class="btn btnRanking"></button>
             </a>
-			<a href="puntuacion.html" lang='en'>
+			<a href="Puntuacion.html" lang='en'>
                 <button class="btn btnRanking btnRankingIng"></button>
             </a>
 			
@@ -48,13 +48,17 @@
 
         <script language = "JavaScript">
 		
+			if (sessionStorage.Ranking == null){
+				var ranking = [];
+				sessionStorage.Ranking == ranking;}
 			if (sessionStorage.Idioma == null){
 				sessionStorage.Idioma = 'es';}
 			document.body.className= sessionStorage.Idioma;
 			//alert(sessionStorage.Idioma);
 			
 			if (sessionStorage.Volumen == null){
-				sessionStorage.Volumen = 0.7;}
+				sessionStorage.Volumen = 0.7;
+				sessionStorage.VolumenAntes = 0.7;}
             let musicaMenu = new Audio("assets/audios/Main_Theme.m4a");
             musicaMenu.addEventListener('ended', function() {
                 this.currentTime = 0;

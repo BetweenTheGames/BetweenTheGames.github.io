@@ -11,30 +11,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     </head>
 
-    <body>
-        <div id="botones" class="containerModo salto">
-            
+    <body background="assets/images/Backgrounds/Fonfo_liso.png" style="background-attachment: fixed; background-repeat: no-repeat">
+        <div id="botones" lang='es' class="containerModo salto">
                 <a href="contrarreloj.html" lang='es'>
                     <button id="contrarrelojBoton" class="btn btnContra"></button>
                 </a>
-				<a href="contrarreloj.html" lang='en'>
+				<!--<a href="contrarreloj.html" lang='en'>
                     <button id="contrarrelojBoton" class="btn btnContra btnContraIng"></button>
-                </a>
+                </a>-->
                 
                 <a href="maraton.html" lang='es'>
                     <button id="maratonBoton" class="btn btnMaraton"></button>
                 </a>
+				<!--<a href="maraton.html" lang='en'>
+                    <button id="maratonBoton" class="btn btnMaraton btnMaratonIng"></button>
+                </a>-->
+					
+				<a href="Menu.html" lang='es'>
+					<button class="btn btnVolver" ></button>
+				</a>
+				<!--<a href="Menu.html" lang='en'>
+					<button class="btn btnVolver btnVolverIng" ></button>
+				</a>-->
+        </div>
+		<div id="botones1" lang='en' class="containerModo containerModoIng salto">
+                <!--<a href="contrarreloj.html" lang='es'>
+                    <button id="contrarrelojBoton" class="btn btnContra"></button>
+                </a>-->
+				<a href="contrarreloj.html" lang='en'>
+                    <button id="contrarrelojBoton" class="btn btnContra btnContraIng"></button>
+                </a>
+                
+                <!--<a href="maraton.html" lang='es'>
+                    <button id="maratonBoton" class="btn btnMaraton"></button>
+                </a>-->
 				<a href="maraton.html" lang='en'>
                     <button id="maratonBoton" class="btn btnMaraton btnMaratonIng"></button>
                 </a>
-				
-				<a href="Menu.html" lang='es'>
-					<button class="btn btnVolver"></button>
+					
+				<!--<a href="Menu.html" lang='es'>
+					<button class="btn btnVolver" ></button>
+				</a>-->
+				<a href="Menu.html" lang='en'>
+					<button class="btn btnVolver btnVolverIng" ></button>
 				</a>
-				<a href="Menu.html" lang ='en'>
-					<button class="btnVolver">Back</button>
-				</a>
-        </div>     
+        </div>
 
         <script language = "JavaScript">
 			document.body.className= sessionStorage.Idioma;
@@ -49,6 +70,12 @@
 			//alert(sessionStorage.Volumen);
 			
 			document.getElementById("botones").addEventListener("click", function(){
+				//alert("cambio");
+                sessionStorage.Momento = musicaMenu.currentTime;
+                musicaMenu.play();
+				//alert(sessionStorage.Momento + "/" + musicaMenu.duration)
+			});
+			document.getElementById("botones1").addEventListener("click", function(){
 				//alert("cambio");
                 sessionStorage.Momento = musicaMenu.currentTime;
                 musicaMenu.play();
