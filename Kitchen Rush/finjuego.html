@@ -28,7 +28,7 @@
         <script language = "JavaScript">
 			//sessionStorage.Idioma = 'en';
             document.body.className= sessionStorage.Idioma;
-            let musicaMenu = new Audio("assets/audios/Main_Theme.m4a");
+            let musicaMenu = new Audio("assets/audios/End_Theme.m4a");
             musicaMenu.addEventListener('ended', function() {
                 this.currentTime = 0;
                 this.play();
@@ -46,12 +46,12 @@
 			});
 			alert(sessionStorage.Idioma)
             if(sessionStorage.Idioma == 'es') {
-                var nombre = prompt("¿Cual es tu nombre, chef?", "Anonimo");
-                sessionStorage.setItem("nombreJugador", nombre);
+                //var nombre = prompt("¿Cual es tu nombre, chef?", "Anonimo");
+                //sessionStorage.setItem("nombreJugador", nombre);
             }
             else {
-                var nombre = prompt("What's your name, chef?", "Anonimous");
-                sessionStorage.setItem("nombreJugador", nombre);
+                //var nombre = prompt("What's your name, chef?", "Anonimous");
+                //sessionStorage.setItem("nombreJugador", nombre);
 				var ranking = sessionStorage.Ranking;
 				
 				ranking[ranking.length] = ({persona:sessionStorage.nombreJugador, puntos:sessionStorage.puntosPartida});
