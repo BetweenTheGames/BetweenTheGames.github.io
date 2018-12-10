@@ -12,7 +12,7 @@
     </head>
 
     <body background="assets/images/Backgrounds/Fonfo_liso.png" style="background-attachment: fixed; background-repeat: no-repeat">
-        <div id="botones" class="containerFin">
+        <div class="containerFin">
             <h3 id="puntuacionPartida">50</h3>
             <a href="Menu.html">
                 <button id="menuBtn" class="btn"></button>
@@ -28,14 +28,14 @@
         <script language = "JavaScript">
 			//sessionStorage.Idioma = 'en';
             document.body.className= sessionStorage.Idioma;
-            let musicaMenu = new Audio("assets/audios/Main_Theme.m4a");
+            let musicaMenu = new Audio("assets/audios/End_Theme.m4a");
             musicaMenu.addEventListener('ended', function() {
                 this.currentTime = 0;
                 this.play();
             }, false);
-            //musicaMenu.volume = sessionStorage.Volumen;
-			//musicaMenu.currentTime = sessionStorage.Momento;
-            //musicaMenu.play();
+            musicaMenu.volume = sessionStorage.Volumen;
+			musicaMenu.currentTime = sessionStorage.Momento;
+            musicaMenu.play();
 			//alert(sessionStorage.Volumen);
 			
 			document.getElementById("botones").addEventListener("click", function(){
@@ -44,26 +44,20 @@
                 musicaMenu.play();
 				//alert(sessionStorage.Momento + "/" + musicaMenu.duration)
 			});
-			//alert(sessionStorage.Idioma);
+			alert(sessionStorage.Idioma)
             if(sessionStorage.Idioma == 'es') {
-                var nombre = prompt("¿Cual es tu nombre, chef?", "Anonimo");
-                sessionStorage.setItem("nombreJugador", nombre);
+                //var nombre = prompt("¿Cual es tu nombre, chef?", "Anonimo");
+                //sessionStorage.setItem("nombreJugador", nombre);
             }
             else {
-                var nombre = prompt("What's your name, chef?", "Anonimous");
-                sessionStorage.setItem("nombreJugador", nombre);
+                //var nombre = prompt("What's your name, chef?", "Anonimous");
+                //sessionStorage.setItem("nombreJugador", nombre);
+				var ranking = sessionStorage.Ranking;
 				
-			}
-			//sessionStorage.puntosPartida=10;
-			var ranking = {};
-			ranking = sessionStorage.Ranking;
-			/*if (ranking==null){
-				alert("kill me");
-				ranking=[{persona:jose,puntos:30}];}*/
-			//ranking.push({persona:sessionStorage.nombreJugador, puntos:sessionStorage.puntosPartida});
-			//console.debug("hola" + ranking[ranking.length-1]);
-			sessionStorage.Ranking = ranking;
-			//alert(ranking[0].persona);
+				ranking[ranking.length] = ({persona:sessionStorage.nombreJugador, puntos:sessionStorage.puntosPartida});
+				sessionStorage.Ranking = ranking;
+			alert(sessionStorage.nombreJugador + sessionStorage.puntosPartida);
+            }
             document.getElementById('puntuacionPartida').innerHTML = sessionStorage.getItem("puntosPartida").toString();
         </script>
     </body>

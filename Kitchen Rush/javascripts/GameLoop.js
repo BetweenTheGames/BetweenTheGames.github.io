@@ -50,7 +50,6 @@ var GameLoop = {
                     this.currentTime = 0;
                     this.play();
                 }, false);
-				//musicaJuego.volume = sessionStorage.getItem('Volumen');
                 GameLoop.musicaJuego.play();
                 
                 GameLoop.primeraEjecucion = false;
@@ -262,7 +261,7 @@ var GameLoop = {
 
         // Algoritmo de creacion de los platos
         let numeroRandom = Math.random();
-        if(numeroRandom < 0.3) { // Crea el ingrediente de la izquierda. 20%
+        if(numeroRandom < 0.3) { // Crea el ingrediente de la izquierda
             let nombreIngrediente = Game.platos[0].receta[Game.platos[0].ingredienteActual]
             for(i = 0; i < Game.ingredientesJSON.length; i++) {
                 if(Game.ingredientesJSON[i].nombre == nombreIngrediente) {
@@ -271,7 +270,7 @@ var GameLoop = {
                 }
             }
         }
-        else if(numeroRandom > 0.3 && numeroRandom < 0.6) { // Crear el ingrediente de la derecha. 20%
+        else if(numeroRandom > 0.3 && numeroRandom < 0.6) { // Crear el ingrediente de la derecha
             let nombreIngrediente = Game.platos[1].receta[Game.platos[1].ingredienteActual]
             for(i = 0; i < Game.ingredientesJSON.length; i++) {
                 if(Game.ingredientesJSON[i].nombre == nombreIngrediente) {

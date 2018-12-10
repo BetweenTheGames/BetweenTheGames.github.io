@@ -1,0 +1,118 @@
+/* Contenedo de menus */
+.containerMenu {
+  margin: 0 auto;
+  padding-left: 0%;
+  padding-top: 40%;
+  display: absolute;
+  align-items: center;
+  margin-top: 5%;
+  background-image: url(/assets/images/Backgrounds/overwatchBG.png);
+  width: 300px;
+  height: 600px;
+}
+
+.containerFin {
+  margin: 0 auto;
+  padding-left: 25%;
+  padding-top: 25%;
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  background-image: url(/assets/images/Backgrounds/overwatchBG.png);
+  width: 300px;
+  height: 600px;
+}
+
+.salto {
+  content: '\A'; 
+  white-space: pre;
+}
+
+/* Contenedor del juego */
+.divGame {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.divBotones {
+  margin: 0 auto;
+  display: flex;
+  margin-left: 2%;
+}
+
+/* Canvas del juego */
+.gameCanvas {
+  margin: 0 auto;
+}
+
+/* Distintas resoluciones según el dispositivo */
+/* Móviles
+   ------------------------------------------------------------------------- */
+@media (min-height: 768px) { 
+  .containerMenu {
+    width: 300px;
+    height: 700px;
+    padding-top: 60%;
+  }
+  .containerFin {
+    width: 300px;
+    height: 700px;
+  }
+  /*.gameCanvas {
+    width: 300px;
+    height: 600px;
+  }*/
+  .divBotones {
+    margin-left: 0%;
+  }
+}
+ 
+/* Tablets
+   ------------------------------------------------------------------------- */
+@media (min-height: 1024px) {
+  .containerMenu {
+    width: 700px;
+    height: 900px;
+    padding-top: 50%;
+    padding-left: 25%;
+  }
+  .containerFin {
+    width: 700px;
+    height: 900px;
+    padding-top: 10%;
+    padding-left: 35%;
+  }
+  /*.gameCanvas {
+    width: 700px;
+    height: 900px;
+  }*/
+  .divBotones {
+    margin-left: 4%;
+  }
+ }
+ 
+/* Ordenadores
+   ------------------------------------------------------------------------- */
+@media (min-width: 1200px) { 
+  .containerMenu {
+    width: 1000px;
+    height: 750px;
+    padding-top: 20%;
+    padding-left: 18%;
+  }
+  .containerFin {
+    width: 1000px;
+    height: 750px;
+    padding-top: 20%;
+    padding-left: 23%;
+  }
+  /*#gameCanvas {
+    width: 1000px;
+    height: 750px;
+    style: "width='1000' height='750'";
+  }*/
+  .divBotones {
+    margin-left: 24%;
+  }
+}

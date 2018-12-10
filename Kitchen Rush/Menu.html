@@ -15,10 +15,10 @@
     <body background="assets/images/Backgrounds/Fonfo_liso.png" style="background-attachment: fixed; background-repeat: no-repeat">
         <div id="botones" class="containerMenu ir">
 
-            <a href="Creditos.html" lang='es'>
+            <a href="creditos.html" lang='es'>
                 <button class="btn btnCreditos"></button>
             </a>
-			<a href="Creditos.html" lang='en'>
+			<a href="creditos.html" lang='en'>
                 <button class="btn btnCreditos btnCreditosIng"></button>
             </a>
 
@@ -29,12 +29,12 @@
                 <button class="btn btnJugar btnJugarIng"></button>
             </a>
 
-            <a href="Puntuacion.html" lang='es'>
+            <!--<a href="puntuacion.html" lang='es'>-->
                 <button class="btn btnRanking"></button>
-            </a>
-			<a href="Puntuacion.html" lang='en'>
+            <!--</a>-->
+			<!--<a href="puntuacion.html" lang='en'>-->
                 <button class="btn btnRanking btnRankingIng"></button>
-            </a>
+            <!--</a>-->
 			
 			
             <a href="Opciones.html" lang='es'>
@@ -57,8 +57,7 @@
 			//alert(sessionStorage.Idioma);
 			
 			if (sessionStorage.Volumen == null){
-				sessionStorage.Volumen = 0.7;
-				sessionStorage.VolumenAntes = 0.7;}
+				sessionStorage.Volumen = 0.7;}
             let musicaMenu = new Audio("assets/audios/Main_Theme.m4a");
             musicaMenu.addEventListener('ended', function() {
                 this.currentTime = 0;

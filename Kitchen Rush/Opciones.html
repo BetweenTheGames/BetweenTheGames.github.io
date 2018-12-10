@@ -13,7 +13,7 @@
     </head>
 
     <body onload="drawvolumecontroller(20,70,6);" background="assets/images/Backgrounds/Fonfo_liso.png" style="background-attachment: fixed; background-repeat: no-repeat">
-        <div id="botones" lang='es' class="containerOpt ir">
+        <div id="botones" class="containerOpt ir">
 			<div id="volumcontroller"></div>
 			<div id="volumeindicator"></div>
 			
@@ -25,32 +25,14 @@
 			<a href="Menu.html" lang='es'>
 				<button class="btn btnVolver" ></button>
 			</a>
-			<!--<a href="Menu.html" lang='en'>
-				<button class="btn btnVolver btnVolverIng" ></button>
-			</a>-->	
-
-			<button lang='es' class="btn btnCambio btnCambioIng" onclick="sessionStorage.Idioma='en',document.body.className='en'"></button>
-			<!--<button lang='en'class="btn btnCambio" onclick="sessionStorage.Idioma='es',document.body.className='es'"></button>-->
-        </div>
-		<div id="botones" lang='en' class="containerOpt containerOptIng ir">
-			<div id="volumcontroller"></div>
-			<div id="volumeindicator"></div>
-			
-			<button class="btn btnMute" onclick=" sessionStorage.VolumenAntes = sessionStorage.Volumen, 
-			sessionStorage.Volumen = 0.0, musicaMenu.volume = 0.0"></button>
-			<button class="btn btnUnmute"  onclick=" sessionStorage.Volumen = sessionStorage.VolumenAntes, 
-			musicaMenu.volume = sessionStorage.VolumenAntes"></button>
-			
-			<!--<a href="Menu.html" lang='es'>
-				<button class="btn btnVolver" ></button>
-			</a>-->
 			<a href="Menu.html" lang='en'>
 				<button class="btn btnVolver btnVolverIng" ></button>
 			</a>	
 
-			<!--<button lang='es' class="btn btnCambio btnCambioIng" onclick="sessionStorage.Idioma='en',document.body.className='en'"></button>-->
+			<button lang='es' class="btn btnCambio btnCambioIng" onclick="sessionStorage.Idioma='en',document.body.className='en'"></button>
 			<button lang='en'class="btn btnCambio" onclick="sessionStorage.Idioma='es',document.body.className='es'"></button>
-        </div>		
+			<!---->
+        </div>	
 
         <script language = "JavaScript">
 			document.body.className= sessionStorage.Idioma;
@@ -96,7 +78,6 @@
 				document.getElementById("volumeindicator").innerHTML = newvolume;
 				sessionStorage.Volumen = (20-newvolume)/20;
 				musicaMenu.volume = sessionStorage.Volumen;
-				sessionStorage.VolumenAntes = sessionStorage.Volumen;
 				//alert (sessionStorage.Volumen);
 			}
 		</script>
