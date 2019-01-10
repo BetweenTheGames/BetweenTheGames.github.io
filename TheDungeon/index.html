@@ -4,55 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | The dungeon</title>
-    <!-- Aquí el script para conectar con facebookGames, CDN de Facebook-->
-    <script src="https://connect.facebook.net/en_US/fbinstant.6.2.js"></script>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/TheDungeon.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/The_Dungeon.json", {onProgress: UnityProgress});
     </script>
   </head>
-  
   <body>
-      <script>
-          window.fbAsyncInit = function (){
-
-            FB.init({
-
-              appId: '2253561694920409',
-              xfbml: true,
-              version: 'v3.2'
-
-            });
-
-            FBInstant.initializeAsync().then(function () {
-                      FBInstant.setLoadingProgress(100);
-                      FBInstant.startGameAsync().then(function () {
-                        var windowWidth = window.innerWidth;
-                        var windowHeight = window.innerHeight;
-                        if (windowWidth > windowHeight) {
-                          windowWidth = windowHeight / 1.8;
-                        }
-                        var gameWidth = windowWidth * gameOptions.gameHeight / windowHeight;
-                      })
-              })
-
-          
-          
-          };
-
-          (function (d, s, id) {
-            
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if(d.getElementById(id)){return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-
-      </script>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
